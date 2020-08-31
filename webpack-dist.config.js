@@ -56,7 +56,7 @@ module.exports = {
       // 自定义域名
       fs.writeFileSync(
         path.resolve(outputPath, "CNAME"),
-        "resume.happylql.top"
+        "resume.happylql.xyz"
       );
 
       // 调用 Chrome 渲染出 PDF 文件
@@ -65,7 +65,7 @@ module.exports = {
         "--headless",
         "--disable-gpu",
         `--print-to-pdf=${path.resolve(outputPath, "resume.pdf")}`,
-        "http://resume.happylql.top", // 这里注意改成你的在线简历的网站
+        "http://resume.happylql.xyz", // 这里注意改成你的在线简历的网站
       ]);
     }),
   ],
