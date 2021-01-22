@@ -111,7 +111,13 @@
                 </p>
                 <ul class="section-content">
                   <li>
-                    负责团队基础技术支撑，包含构建流程、工具包、新技术(如SW)探索实践等
+                    负责团队基础技术支撑，包含构建流程、工具包、新技术探索实践等
+                  </li>
+                  <li>
+                    进行边缘计算MEP的API网关性能重构。将原来基于Spring Cloud Gateway实现的MEP网关重构迁移至Traefik网关。完成原5G MEP网关需求的动态路由，全局异常功能的开发，并输出相关的压力测试报告。整合MEP业务逻辑后的API网关能够在多轮压测中保持平静吞吐量大于1500rps，且同时保证90%以上的请求在5ms内返回，满足了MEC边缘计算环境下的网关性能要求。同时在执行两周的稳定性测试中，新MEP网关保持稳定，无崩溃无资源占用过多的问题。
+                  </li>
+                  <li>
+                    进行MEP环境下流量统计技术方案的设计与实现。基于SideCar方式实现了对MEP环境下的容器及虚拟机进行流量统计的方案，替换与增强了原有基于宿主机实现的容器流量统计方案。该方案实现了对容器及虚拟机流量的联合统计，实现容器流量探针，支持弹性资源占用，与K8S宿主机隔离，极大简化了运维相关配置，采集精度与宿主机的TCPDUMP方式持平。
                   </li>
                 </ul>
               </div>
@@ -127,20 +133,6 @@
           </header>
           <div class="section-bd">
             以下是我的开源项目与学习总结，细节请点击链接查看文档
-
-            <!--项目:Egret-->
-            <div class="item">
-              <header class="item-hd">
-                <a class="btn item-more" href="https://www.egret.com/">Egret</a>
-              </header>
-              <div class="item-bd">
-                <ul>
-                  <li>
-                    Egret相关项目
-                  </li>
-                </ul>
-              </div>
-            </div>
 
             <!--项目:Golang-->
             <div class="item">
